@@ -10,7 +10,7 @@ const random = (min = 1, max = 0) => {
 
 // function to limit a number between lower and higher bound
 const limit = (n, low, high) => {
-    if (n > low && n < high) {
+    if (n >= low && n <= high) {
         return n;
     } else if (n < low) {
         return low;
