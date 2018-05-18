@@ -10,9 +10,9 @@ const random = (min = 1, max = 0) => {
 
 // function to limit a number between lower and higher bound
 const limit = (n, low, high) => {
-    if(n > low && n < high) {
+    if (n > low && n < high) {
         return n;
-    } else if (n < low ) {
+    } else if (n < low) {
         return low;
     } else if (n > high) {
         return high;
@@ -21,9 +21,9 @@ const limit = (n, low, high) => {
 
 // function to map a number from one range into another
 const map = (n, start1, end1, start2, end2, limited = false) => {
-    const newVal = ((n - start1)/ (end1 -start1)) * (end2 - start2) + start2;
+    const newVal = ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
 
-    if(!limited) {
+    if (!limited) {
         return newVal;
     } else if (start2 < end2) {
         return limit(newVal, start2, end2);
